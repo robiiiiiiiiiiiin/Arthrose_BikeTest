@@ -136,11 +136,11 @@ class CreateForeignKeys extends Migration
         });
 
         Schema::table('vtts', function($table) {
-            $table->foreign('bike_id')->references('product_id')->on('bikes')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('bike_id')->references('id')->on('bikes')->onDelete('restrict')->onUpdate('restrict');
         });
 
         Schema::table('e_bikes', function($table) {
-            $table->foreign('bike_id')->references('product_id')->on('bikes')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('bike_id')->references('id')->on('bikes')->onDelete('restrict')->onUpdate('restrict');
         });
 
     }

@@ -15,7 +15,7 @@ class CreateBikesTable extends Migration
     {
         Schema::create('bikes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('product_id')->unsigned()->unique();
+            $table->bigInteger('product_id')->unsigned();
             $table->string('size', 8);
             $table->string('distinctive_sign', 128);
             $table->softDeletes();
